@@ -13,9 +13,12 @@ export default function Stories() {
     const suggestions = [...Array(20)].map((_, i) => ({
       ...faker.helpers.contextualCard(),
       id: i,
+      userAvatar: `https://i.pravatar.cc/?img${i}`
     }));
     setSuggestions(suggestions);
   }, []);
+
+  console.log(suggestions)
 
   return (
     <div
@@ -25,8 +28,8 @@ export default function Stories() {
       {session && (
         <Story img={session.user.image} username={session.user.username} />
       )}
-      {suggestions.map(({ id, avatar, username }) => (
-        <Story key={id} img={avatar} username={username} />
+      {suggestions.map(({ id, userAvatar, username }) => (
+        <Story key={id} img={userAvatar} username={username} />
       ))}
     </div>
   );

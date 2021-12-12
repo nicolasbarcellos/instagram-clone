@@ -9,6 +9,7 @@ export default function Suggestions() {
     const suggestions = [...Array(5)].map((_, i) => ({
       ...faker.helpers.contextualCard(),
       id: i,
+      userAvatar: `https://i.pravatar.cc/?img${i}`
     }));
     setSuggestions(suggestions);
   }, []);
@@ -28,7 +29,7 @@ export default function Suggestions() {
           <img
             className="w-10 h-10 rounded-full border
             p-[2px]"
-            src={profile.avatar}
+            src={profile.userAvatar}
             alt=""
           />
           <div className="flex-1 ml-4">
