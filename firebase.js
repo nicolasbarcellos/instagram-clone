@@ -18,4 +18,4 @@ const storage = getStorage();
 
 export { app, db, storage };
 
-console.log('object')
+console.log('a')
