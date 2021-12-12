@@ -5,9 +5,9 @@ import { getStorage } from "firebase/storage";
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
-  projectId: "insta-clone-99d8e",
-  storageBucket: "insta-clone-99d8e.appspot.com",
-  messagingSenderId: "244401304100",
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSENGER_ID,
   appId: process.env.NEXT_PUBLIC_APP_ID,
 };
 
@@ -18,4 +18,3 @@ const storage = getStorage();
 
 export { app, db, storage };
 
-console.log('changes')
