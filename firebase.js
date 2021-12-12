@@ -17,3 +17,5 @@ const db = getFirestore();
 const storage = getStorage();
 
 export { app, db, storage };
+
+console.log('object')
