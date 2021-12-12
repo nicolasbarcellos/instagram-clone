@@ -18,4 +18,3 @@ const storage = getStorage();
 
 export { app, db, storage };
 
-console.log('ad')
