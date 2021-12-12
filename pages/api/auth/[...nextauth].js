@@ -11,7 +11,7 @@ export default NextAuth({
     // ...add more providers here
   ],
   pages: {
-    signIn: "/auth/signin",
+    signIn: "/auths/signin",
   },
   callbacks: {
     async session({ session, token, user }) {
